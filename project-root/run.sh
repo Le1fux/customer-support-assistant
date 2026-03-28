@@ -1,12 +1,9 @@
 #!/bin/bash
 
-echo "Running pipeline..."
-python src/data_pipeline.py
+echo "Installing dependencies..."
+pip install -r requirements.txt
 
-echo "Training model..."
-python src/train.py
-
-echo "Evaluating..."
-python src/eval.py
+echo "Running project..."
+python train.py
 
 echo "Done."

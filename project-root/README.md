@@ -4,34 +4,44 @@ AI-based Customer Support Assistant using NLP, CNN, and Reinforcement Learning.
 
 ---
 
+## Overview
+
+This project develops an intelligent system that classifies and assists customer support queries using machine learning models such as baseline classifiers, Convolutional Neural Networks (CNN), and a Reinforcement Learning (RL) prototype.
+
+---
+
 ## Dataset
 
 The project uses the **Customer Support on Twitter** dataset.
 
-Due to file size limits, the full dataset is not included.
+Due to file size limits, the full dataset is not included in this repository.
 
-Kaggle Source:
-https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+* Kaggle Source:
+  https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
 
-Google Drive (Full Dataset):
-https://drive.google.com/drive/folders/1FjeuOT-CilEfIYtDJzlwBwc7bQC8A_Ex?usp=sharing
+* Google Drive (Full Dataset):
+  https://drive.google.com/drive/folders/1FjeuOT-CilEfIYtDJzlwBwc7bQC8A_Ex?usp=sharing
 
-A sample dataset is included:
+A sample dataset is included for testing:
 
 ```
-/data/sample_dataset.csv
+data/sample_dataset.csv
 ```
 
 ---
 
-## Setup
+## Quick Start
 
-1. Download the dataset from Google Drive
-2. Place it in the `/data` folder
-3. Run:
+1. Install dependencies:
 
 ```
-python run_pipeline.py
+pip install -r requirements.txt
+```
+
+2. Run the project:
+
+```
+python train.py
 ```
 
 ---
@@ -40,34 +50,60 @@ python run_pipeline.py
 
 ```
 customer-support-assistant/
-│── FPPW2/
-│   ├── baseline_py
-│   ├── cnn_prototype.py
-│   ├── rl_stub.py
-│   ├── run_pipeline.py
+│── README.md
+│── LICENSE
+│── requirements.txt
+│── run.sh
 │
 │── data/
 │   └── sample_dataset.csv
 │
-│── README.md
+│── src/
+│   └── run_pipeline.py
+│
+│── models/
+│   ├── baseline.py
+│   ├── cnn_prototype.py
+│   └── rl_stub.py
+│
+│── train.py
 ```
 
 ---
 
-## Progress (Week 2)
+## Highlights
 
-* Data collected and cleaned
-* EDA started
-* Baseline models trained
+* NLP preprocessing pipeline
+* Baseline machine learning models
+* CNN-based classification
+* Reinforcement Learning prototype
+* Modular and extensible design
+
+---
+
+## Progress
+
+* Data collection and preprocessing completed
+* Exploratory Data Analysis (EDA) started
+* Baseline models implemented
 * CNN prototype running
-* NLP pipeline setup
+* NLP pipeline established
 * RL agent (basic version)
+
+---
+
+## Team
+
+* Basilio, Leif Levinson C.
+* Cirineo, Darrel Cedric R.
+* Dingal, Marion Anthony S.
+* Perez, Sebastian T.
 
 ---
 
 ## Notes
 
-* Use full dataset for better results
-* Sample dataset is for testing only
+* Use the full dataset for better performance
+* Sample dataset is for testing purposes only
 
 ---
