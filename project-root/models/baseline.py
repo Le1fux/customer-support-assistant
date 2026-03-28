@@ -8,10 +8,14 @@ from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.preprocessing import LabelEncoder
 
-train_df = pd.read_csv("train.csv")
-val_df = pd.read_csv("val.csv")
+DATA_DIR = "data"
+
+# Load data
+train_df = pd.read_csv(f"{DATA_DIR}/train.csv")
+val_df = pd.read_csv(f"{DATA_DIR}/val.csv")
 print("Data loaded!")
 
+# Add target column: whether a response exists
 train_df['has_response'] = train_df['response_tweet_id'].notnull()
 val_df['has_response'] = val_df['response_tweet_id'].notnull()
 

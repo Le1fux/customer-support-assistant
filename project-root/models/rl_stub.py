@@ -4,8 +4,11 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report, f1_score
 
-train_df = pd.read_csv("train.csv")
-val_df   = pd.read_csv("val.csv")
+DATA_DIR = "data"
+
+# Load data
+train_df = pd.read_csv(f"{DATA_DIR}/train.csv")
+val_df   = pd.read_csv(f"{DATA_DIR}/val.csv")
 print("Train/Val loaded for RL stub!")
 
 le = LabelEncoder()

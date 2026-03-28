@@ -7,9 +7,11 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import classification_report, f1_score
 import numpy as np
 
+DATA_DIR = "data"
 
-train_df = pd.read_csv("train.csv").sample(50000, random_state=42)  
-val_df   = pd.read_csv("val.csv").sample(10000, random_state=42)
+# Load data
+train_df = pd.read_csv(f"{DATA_DIR}/train.csv").sample(50000, random_state=42)  
+val_df   = pd.read_csv(f"{DATA_DIR}/val.csv").sample(10000, random_state=42)
 print("Subset loaded for CNN prototype!")
 
 le = LabelEncoder()
